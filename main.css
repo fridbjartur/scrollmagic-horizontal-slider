@@ -1,0 +1,68 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: black;
+}
+
+body::before {
+  background-image: url('grid.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 150% 150%;
+  background-attachment: fixed;
+
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+}
+
+main::before {
+  content: '';
+  box-shadow: inset 0px 0px 250px 110px #000;
+  position: fixed;
+  top: -25%;
+  left: 0;
+  width: 100%;
+  height: 150%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-content {
+  width: 500px;
+  height: 300px;
+}
+
+img {
+  height: 100%;
+}
+
+h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  width: 100vw;
+  color: white;
+  font-size: 5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0;
+}
